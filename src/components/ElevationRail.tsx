@@ -24,7 +24,7 @@ export default function ElevationRail() {
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && entry.target instanceof HTMLElement) {
             setActive(entry.target.dataset.elevation ?? null);
             setDark(entry.target.dataset.elevationTheme === "dark");
           }
