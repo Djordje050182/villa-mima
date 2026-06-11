@@ -8,7 +8,7 @@ import "./globals.css";
 const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin"],
-  weight: ["300", "400"],
+  weight: ["300"],
   style: ["normal", "italic"],
   display: "swap",
 });
@@ -16,7 +16,7 @@ const fraunces = Fraunces({
 const karla = Karla({
   variable: "--font-karla",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["400", "700"],
   display: "swap",
 });
 

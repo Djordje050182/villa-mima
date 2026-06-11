@@ -44,7 +44,7 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div className="mt-14 flex flex-col gap-3 border-t border-limestone/15 pt-6 text-xs text-limestone/50 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 flex flex-col gap-3 border-t border-limestone/15 pt-6 text-xs text-limestone/70 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()} Villa Mima · {site.location.village},{" "}
             {site.location.region}, {site.location.country}
