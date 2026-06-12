@@ -9,6 +9,7 @@ const nextConfig: NextConfig = isStaticPreview
   ? {
       output: "export",
       basePath: "/villa-mima",
+      trailingSlash: true,
       images: { unoptimized: true },
       env: { NEXT_PUBLIC_BASE_PATH: "/villa-mima", NEXT_PUBLIC_STATIC_PREVIEW: "1" },
     }
