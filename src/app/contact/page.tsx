@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import ContourDivider from "@/components/ContourDivider";
 import Reveal from "@/components/Reveal";
 import { site, CTA_LABEL } from "@/lib/site";
+import { breadcrumbJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
   title: "Contact & Getting Here — Muo, Bay of Kotor",
@@ -45,6 +46,12 @@ const practical = [
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd("Contact & Getting Here", "/contact")),
+        }}
+      />
       <Header />
 
       <section data-elevation="villa" className="bg-limestone">

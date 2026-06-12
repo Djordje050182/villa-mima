@@ -5,6 +5,7 @@ import ImageSlot from "@/components/ImageSlot";
 import ContourDivider from "@/components/ContourDivider";
 import Reveal from "@/components/Reveal";
 import { CTA_LABEL } from "@/lib/site";
+import { breadcrumbJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
   title: "Explore — Our Guide to Kotor, the Bay & Beyond",
@@ -98,6 +99,10 @@ const eating = [
 export default function ExplorePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("Explore", "/explore")) }}
+      />
       <Header />
 
       <section data-elevation="villa" className="bg-limestone">

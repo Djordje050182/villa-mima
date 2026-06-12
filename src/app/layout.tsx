@@ -35,6 +35,10 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image" },
   alternates: { canonical: "/" },
+  // The GitHub Pages preview must never be indexed; villamima.com is the real site
+  ...(process.env.NEXT_PUBLIC_STATIC_PREVIEW === "1"
+    ? { robots: { index: false, follow: false } }
+    : {}),
 };
 
 export default function RootLayout({

@@ -14,6 +14,10 @@ const tints: Record<Tint, string> = {
 
 const files = manifest as Record<string, string>;
 
+// next/image does not prepend basePath to src in unoptimized/static-export mode,
+// so the GitHub Pages preview needs it added by hand. Empty in production.
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 /**
  * Photography slot. Drop a real photo at public/images/<id>.jpg (or .webp/.avif/.png)
  * and re-run dev/build — the slot renders it via next/image. Until then it renders a
@@ -46,7 +50,7 @@ export default function ImageSlot({
     return (
       <div className={`relative overflow-hidden ${className}`}>
         <Image
-          src={src}
+          src={`${BASE_PATH}${src}`}
           alt={alt}
           fill
           priority={priority}

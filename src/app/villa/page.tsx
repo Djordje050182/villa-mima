@@ -5,6 +5,7 @@ import ImageSlot from "@/components/ImageSlot";
 import ContourDivider from "@/components/ContourDivider";
 import Reveal from "@/components/Reveal";
 import { CTA_LABEL } from "@/lib/site";
+import { breadcrumbJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
   title: "The Villa — 4 Bedrooms, Private Pool & 10,000 m² of Hillside",
@@ -84,6 +85,10 @@ const gallery = [
 export default function VillaPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("The Villa", "/villa")) }}
+      />
       <Header />
 
       <section data-elevation="villa" className="bg-limestone">

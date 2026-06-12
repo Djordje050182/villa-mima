@@ -7,6 +7,10 @@ type Status = "idle" | "sending" | "sent" | "error";
 const inputClasses =
   "w-full border border-ink/20 bg-limestone px-4 py-3 text-[15px] text-ink placeholder:text-ink/40 focus:border-teal";
 
+// The static GitHub Pages preview has no API routes, so the form falls back to
+// composing an email instead of posting to /api/enquiry.
+const IS_STATIC_PREVIEW = process.env.NEXT_PUBLIC_STATIC_PREVIEW === "1";
+
 export default function EnquiryForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -15,6 +19,17 @@ export default function EnquiryForm() {
     event.preventDefault();
     const form = event.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
+
+    if (IS_STATIC_PREVIEW) {
+      const subject = encodeURIComponent(
+        `Enquiry: ${data.checkIn} to ${data.checkOut}, ${data.guests} guests — ${data.name}`
+      );
+      const bodyText = encodeURIComponent(
+        `Dates: ${data.checkIn} to ${data.checkOut}\nGuests: ${data.guests}\n\n${data.message ?? ""}`
+      );
+      window.location.href = `mailto:stay@villamima.com?subject=${subject}&body=${bodyText}`;
+      return;
+    }
 
     setStatus("sending");
     setErrorMessage(null);

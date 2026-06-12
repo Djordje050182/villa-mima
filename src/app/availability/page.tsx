@@ -5,6 +5,7 @@ import AvailabilityCalendar from "@/components/AvailabilityCalendar";
 import EnquiryForm from "@/components/EnquiryForm";
 import Reveal from "@/components/Reveal";
 import { site } from "@/lib/site";
+import { bookingFaq, faqJsonLd, breadcrumbJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
   title: "Availability & Booking — Book Direct with the Family",
@@ -17,6 +18,16 @@ export const metadata: Metadata = {
 export default function AvailabilityPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd()) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd("Availability & Booking", "/availability")),
+        }}
+      />
       <Header />
 
       <section data-elevation="villa" className="bg-limestone">
@@ -31,6 +42,12 @@ export default function AvailabilityPage() {
             Found your dates? Send us an enquiry and we will reply personally, usually
             within a day. {site.hosts} will be there to welcome you when you arrive.
           </p>
+          <a
+            href="#enquiry"
+            className="mt-7 inline-block text-[13px] font-bold tracking-[0.14em] text-teal uppercase underline decoration-sea-glass underline-offset-4 hover:text-bay-night"
+          >
+            Skip to the enquiry form ↓
+          </a>
         </div>
       </section>
 
@@ -48,7 +65,7 @@ export default function AvailabilityPage() {
         </div>
       </section>
 
-      <section data-elevation="villa" className="bg-limestone">
+      <section id="enquiry" data-elevation="villa" className="bg-limestone">
         <ContourDivider fill="fill-limestone" bg="bg-limestone-warm" />
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <div className="grid gap-14 lg:grid-cols-[1fr_minmax(0,1.4fr)]">
@@ -76,6 +93,35 @@ export default function AvailabilityPage() {
               <EnquiryForm />
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      <section data-elevation="villa" className="bg-limestone-warm">
+        <ContourDivider fill="fill-limestone-warm" bg="bg-limestone" />
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <Reveal>
+            <h2 className="text-2xl sm:text-4xl">
+              Questions we are <span className="italic">often asked</span>
+            </h2>
+            <div className="mt-8 max-w-3xl divide-y divide-ink/10 border-y border-ink/10">
+              {bookingFaq.map((faq) => (
+                <details key={faq.question} className="group py-5">
+                  <summary className="flex cursor-pointer list-none items-baseline justify-between gap-6 font-display text-lg text-ink [&::-webkit-details-marker]:hidden">
+                    {faq.question}
+                    <span
+                      aria-hidden="true"
+                      className="text-sea-glass transition-transform group-open:rotate-45"
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <p className="mt-3 max-w-prose text-[15px] leading-relaxed text-ink/75">
+                    {faq.answer}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </Reveal>
         </div>
       </section>
     </>

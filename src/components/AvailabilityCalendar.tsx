@@ -77,6 +77,8 @@ function Month({ data, today }: { data: AvailabilityMonth; today: string }) {
 export default async function AvailabilityCalendar() {
   const { ok, months } = await getAvailability(8);
   const today = todayIso();
+  const soon = months.slice(0, 4);
+  const later = months.slice(4);
 
   return (
     <div>
@@ -98,10 +100,26 @@ export default async function AvailabilityCalendar() {
       )}
 
       <div className="mt-8 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-        {months.map((m) => (
+        {soon.map((m) => (
           <Month key={m.label} data={m} today={today} />
         ))}
       </div>
+
+      {later.length > 0 && (
+        <details className="group mt-12">
+          <summary className="inline-flex cursor-pointer list-none items-center gap-3 border border-teal/40 px-5 py-3 text-[13px] font-bold tracking-[0.14em] text-teal uppercase transition-colors hover:bg-teal hover:text-limestone [&::-webkit-details-marker]:hidden">
+            <span className="group-open:hidden">
+              Show later dates — {later[0].label} onwards
+            </span>
+            <span className="hidden group-open:inline">Hide later dates</span>
+          </summary>
+          <div className="mt-10 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+            {later.map((m) => (
+              <Month key={m.label} data={m} today={today} />
+            ))}
+          </div>
+        </details>
+      )}
     </div>
   );
 }
