@@ -13,7 +13,9 @@ is the source of truth for brand, design, and project rules. Stay on-brand in ev
 - 4 bedrooms, 3 bathrooms, sleeps 8, private pool, 10,000 m² of private land, separate
   annex, panoramic views over the entire Bay of Kotor.
 - Behind the house the land climbs into the mountain: private nature trail, views over
-  Boka Bay and towards Tivat. **Never mention a memorial bench — excluded deliberately.**
+  Boka Bay and towards Tivat. **There is no bench up there — none exists. Never mention
+  one, and never write copy that implies somewhere to sit at the top (e.g. "take a
+  coffee up", "a glass of wine at the viewpoint"). The trail and the views are the story.**
 - Hosts on the ground: our cousins Lidija and Miro.
 - Muo: the quiet, unspoilt western shore. 20 min walk / 4 min drive to Kotor's UNESCO
   old town. Tivat airport ~20 min.

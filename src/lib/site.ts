@@ -8,9 +8,9 @@ export const site = {
     region: "Bay of Kotor",
     country: "Montenegro",
     countryCode: "ME",
-    // TODO(owner): replace with the villa's exact coordinates
-    latitude: 42.4225,
-    longitude: 18.7621,
+    // From the villa's Impera listing — TODO(owner): confirm against the gate location
+    latitude: 42.43013,
+    longitude: 18.75607,
   },
   facts: {
     bedrooms: 4,
@@ -22,8 +22,8 @@ export const site = {
   email: "stay@villamima.com", // TODO(owner): confirm enquiry address
   bookingLinks: {
     // Footer only — direct booking is the primary route.
-    airbnb: "https://www.airbnb.com/", // TODO(owner): paste the real listing URL
-    bookingCom: "https://www.booking.com/", // TODO(owner): paste the real listing URL
+    airbnb: "https://www.airbnb.com/rooms/11931829",
+    bookingCom: "https://www.booking.com/hotel/me/villa-mima.html",
   },
 } as const;
 

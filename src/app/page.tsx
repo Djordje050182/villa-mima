@@ -13,25 +13,25 @@ const facts = [
   { value: "10,000 m²", label: "Private land" },
 ];
 
-// TODO(owner): replace with real guest reviews (Airbnb / Booking.com / guest book).
+// Real guest reviews from the Airbnb listing (airbnb.com/rooms/11931829), lightly trimmed.
 const reviews = [
   {
     quote:
-      "Waking up to that view of the bay every morning was something we still talk about. The house itself is beautiful — old stone outside, everything you could want inside.",
-    name: "Guest review placeholder",
-    detail: "replace with a real review",
+      "Absolutely stunning view. Very comfortable space. Tons of common area to relax in. Very well equipped kitchen. The pool was sparkling clear and lovely.",
+    name: "Nancy",
+    detail: "Airbnb guest · September 2023",
   },
   {
     quote:
-      "Lidija and Miro looked after us like family. Quiet, private, and ten minutes from Kotor — we never wanted to leave the pool.",
-    name: "Guest review placeholder",
-    detail: "replace with a real review",
+      "Beautiful villa in Kotor. Lovely outdoor space with view. Hosts were extremely helpful throughout our stay — helped organise transfers, a private boat tour and even dropped up a lighter for the barbecue.",
+    name: "Kate",
+    detail: "Airbnb guest · June 2022",
   },
   {
     quote:
-      "The walk up the family trail behind the house at sunset, with the whole of Boka Bay below, was the best thing we did in Montenegro.",
-    name: "Guest review placeholder",
-    detail: "replace with a real review",
+      "We had a great time here. A perfect place especially for families with older kids. Recommended.",
+    name: "André",
+    detail: "Airbnb guest · July 2022",
   },
 ];
 
@@ -226,9 +226,9 @@ export default function Home() {
                 </p>
                 <p>
                   Climb for ten minutes and the whole of Boka Bay opens out beneath
-                  you, with Tivat and the open Adriatic beyond. Take a coffee up in
-                  the morning, or a glass of wine before dinner. It is a view very few
-                  people will ever have to themselves.
+                  you, with Tivat and the open Adriatic beyond. Go up early while the
+                  bay is still, or before dinner when the light softens. It is a view
+                  very few people will ever have to themselves.
                 </p>
               </div>
             </Reveal>

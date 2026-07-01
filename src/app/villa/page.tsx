@@ -14,31 +14,32 @@ export const metadata: Metadata = {
   alternates: { canonical: "/villa" },
 };
 
-// TODO(owner): confirm bed configurations and per-room details.
+// Bed configuration from the Airbnb listing: one double + two twin rooms in the
+// main house, one double in the annex. TODO(owner): confirm which named room is which.
 const bedrooms = [
   {
     id: "bedroom-1",
     name: "The bay room",
-    detail: "King bed · bay view — confirm details",
+    detail: "Double bed · bay view",
   },
   {
     id: "bedroom-2",
     name: "The beam room",
-    detail: "King bed · original beams — confirm details",
+    detail: "Two single beds · original beams",
   },
   {
     id: "bedroom-3",
     name: "The garden room",
-    detail: "Double bed · garden view — confirm details",
+    detail: "Two single beds · garden view",
   },
   {
     id: "bedroom-4",
-    name: "The annex room",
-    detail: "Double bed · in the annex — confirm details",
+    name: "The annex",
+    detail: "Double bed · self-contained annex",
   },
 ];
 
-// TODO(owner): confirm this list before launch — placeholders marked.
+// Amenities drawn from the Airbnb listing — TODO(owner): final confirm before launch.
 const amenities: { group: string; items: string[] }[] = [
   {
     group: "The house",
@@ -46,19 +47,20 @@ const amenities: { group: string; items: string[] }[] = [
       "Original wooden beams and thick stone walls",
       "Cool in summer, warm in winter",
       "Air conditioning throughout",
-      "Fast Wi-Fi",
-      "Full kitchen, properly equipped",
+      "Fast Wi-Fi and a dedicated workspace",
+      "Hand-made kitchen, properly equipped",
       "Washing machine",
     ],
   },
   {
     group: "Outside",
     items: [
-      "Private pool above the bay",
+      "Private 10-metre pool above the bay",
       "10,000 m² of private gardens, olive and herb",
       "Private nature trail up the mountainside",
-      "Outdoor dining with panoramic bay views",
-      "Barbecue",
+      "Covered outdoor dining with panoramic bay views",
+      "Outdoor kitchen with barbecue, and an outdoor shower",
+      "Outdoor cinema, table tennis, badminton and boules",
       "Private parking",
     ],
   },
