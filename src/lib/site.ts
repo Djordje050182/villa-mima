@@ -2,7 +2,7 @@ export const site = {
   name: "Villa Mima",
   url: "https://www.villamima.com",
   description:
-    "Villa Mima is a restored 150-year-old stone villa in Muo, on the quiet western shore of the Bay of Kotor, Montenegro. Four bedrooms, private pool, 10,000 m² of private hillside and panoramic views over the whole bay. Book direct with the family.",
+    "Villa Mima is a restored centuries-old stone villa in Muo, on the quiet western shore of the Bay of Kotor, Montenegro. Four bedrooms, private pool, 10,000 m² of private hillside and panoramic views over the whole bay. Book direct with the family.",
   location: {
     village: "Muo",
     region: "Bay of Kotor",
@@ -15,7 +15,8 @@ export const site = {
   facts: {
     bedrooms: 4,
     bathrooms: 3,
-    sleeps: 8,
+    sleeps: 8, // comfortably, in beds — the headline figure everywhere
+    maxSleeps: 12, // two sofa beds take larger groups to twelve
     landSquareMetres: 10000,
   },
   hosts: "Lidija and Miro",

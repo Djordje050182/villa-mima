@@ -23,8 +23,8 @@ function parseAndValidate(body: Record<string, unknown>): Enquiry | string {
   const isoDate = /^\d{4}-\d{2}-\d{2}$/;
   if (!isoDate.test(checkIn) || !isoDate.test(checkOut)) return "Please choose your dates.";
   if (checkOut <= checkIn) return "Check-out must be after check-in.";
-  if (!Number.isInteger(guests) || guests < 1 || guests > site.facts.sleeps)
-    return `Guests must be between 1 and ${site.facts.sleeps}.`;
+  if (!Number.isInteger(guests) || guests < 1 || guests > site.facts.maxSleeps)
+    return `Guests must be between 1 and ${site.facts.maxSleeps}.`;
   if (!name || name.length > 200) return "Please tell us your name.";
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 320)
     return "Please enter a valid email address.";

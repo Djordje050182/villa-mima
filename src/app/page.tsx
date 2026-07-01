@@ -101,7 +101,7 @@ export default function Home() {
               <div className="mt-7 max-w-prose space-y-5 text-[15px] leading-relaxed text-ink/80 sm:text-base">
                 <p>
                   This land has been in our family for more than a hundred years. The
-                  house itself is older still — a 150-year-old stone house where our
+                  house itself is older still — a centuries-old stone house where our
                   father was born, and where he tended the gardens and herbs his whole
                   life.
                 </p>

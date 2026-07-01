@@ -1,6 +1,6 @@
 # Villa Mima — villamima.com
 
-The website for Villa Mima, a restored 150-year-old stone villa in Muo, Bay of Kotor,
+The website for Villa Mima, a restored centuries-old stone villa in Muo, Bay of Kotor,
 Montenegro. Next.js (App Router) + Tailwind v4, static-first, deployed on Vercel.
 Brand and design rules live in [CLAUDE.md](./CLAUDE.md). The photo shot list lives in
 [public/images/README.md](./public/images/README.md).

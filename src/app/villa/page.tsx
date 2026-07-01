@@ -101,7 +101,7 @@ export default function VillaPage() {
             you want to live now
           </h1>
           <p className="mt-7 max-w-2xl text-[15px] leading-relaxed text-ink/80 sm:text-base">
-            Every wall here was built by hand a century and a half ago. The restoration
+            Every wall here was built by hand centuries ago. The restoration
             kept all of it — the beams, the stone, the proportions — and added what a
             modern stay needs: generous bathrooms, a proper kitchen, and a pool above
             the water. Four bedrooms and a separate annex sleep eight in comfort.
@@ -128,6 +128,10 @@ export default function VillaPage() {
             <h2 className="mt-5 text-3xl leading-snug sm:text-5xl">
               Four bedrooms, <span className="italic">three bathrooms</span>
             </h2>
+            <p className="mt-7 max-w-prose text-[15px] leading-relaxed text-ink/80 sm:text-base">
+              Eight guests sleep comfortably in beds; two sofa beds can take a
+              larger group up to twelve.
+            </p>
           </Reveal>
           <div className="mt-12 grid gap-8 sm:grid-cols-2">
             {bedrooms.map((room, i) => (

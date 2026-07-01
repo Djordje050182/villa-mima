@@ -6,11 +6,13 @@ is the source of truth for brand, design, and project rules. Stay on-brand in ev
 
 ## The story (all true — use it, never embellish)
 
-- Named after our mum, Mima. A 150-year-old stone house on land in the family for over 100 years.
+- Named after our mum, Mima. A centuries-old stone house (exact age unconfirmed — owner
+  chose "centuries-old", never a specific number) on land in the family for over 100 years.
 - Our father was born in the house and tended the gardens and herbs his whole life.
 - Fully restored: original wooden beams and thick stone walls kept, luxury interiors added.
   Cool in summer, warm in winter.
-- 4 bedrooms, 3 bathrooms, sleeps 8, private pool, 10,000 m² of private land, separate
+- 4 bedrooms, 3 bathrooms, sleeps 8 comfortably in beds (two sofa beds take larger
+  groups up to 12 — 8 is the headline figure), private pool, 10,000 m² of private land, separate
   annex, panoramic views over the entire Bay of Kotor.
 - Behind the house the land climbs into the mountain: private nature trail, views over
   Boka Bay and towards Tivat. **There is no bench up there — none exists. Never mention
