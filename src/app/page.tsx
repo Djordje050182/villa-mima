@@ -62,7 +62,7 @@ export default function Home() {
             Muo · Bay of Kotor · Montenegro
           </p>
           <h1 className="mt-5 max-w-3xl text-4xl leading-[1.08] text-limestone sm:text-6xl lg:text-7xl">
-            A hundred and fifty years of stone, sea and <span className="italic">family</span>
+            Centuries of stone, sea and <span className="italic">family</span>
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-limestone/85 sm:text-lg">
             Villa Mima is our mother&rsquo;s house — a restored stone villa on the quiet
